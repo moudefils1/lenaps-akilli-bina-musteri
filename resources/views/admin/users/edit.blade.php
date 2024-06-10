@@ -179,7 +179,7 @@
                                 <label class="form-label">Rol</label>
                                 <!--end::Label-->
                                 <!--begin::Select2-->
-                                <input class="form-control mb-2 text-bg-secondary" placeholder="{{$user->getRolName->name}}" readonly>
+                                <input class="form-control mb-2 text-bg-secondary" placeholder="{{$user->getRolName?->name}}" readonly>
                                 <input type="hidden" name="role" value="{{$user->role_id}}">
                                 <!--end::Input group-->
                             </div>

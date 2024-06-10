@@ -119,7 +119,7 @@
                             </td>
                             <td>{{$user?->phone}}</td>
                             <td>{{$user?->email}}</td>
-                            <td>{{ $user?->getRolName->name }}</td>
+                            <td>{{ $user?->getRolName?->name }}</td>
                             <td class="text-center">{{$user->created_at?->format("d.m.Y - H:i")}}</td>
                             <td class="text-center">{{$user->deleted_at?->format("d.m.Y - H:i")}}</td>
                             <td class="text-end">

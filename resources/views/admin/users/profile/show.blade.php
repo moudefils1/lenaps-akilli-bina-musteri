@@ -71,7 +71,7 @@
                             <!--end::Name-->
                             <!--begin::Position-->
                             {{--<div class="fs-5 fw-semibold text-muted mb-6 text-success">{{ $user->role->getLabel() }}</div>--}}
-                            <div class="badge badge-lg badge-light-primary d-inline mb-5">{{$user->getRolName->name}}</div>
+                            <div class="badge badge-lg badge-light-primary d-inline mb-5">{{$user->getRolName?->name}}</div>
                             <!--end::Position-->
                             <!--begin::Info-->
 
