@@ -157,42 +157,42 @@
                                         <label class="fs-5 form-label mb-2">
                                             <span class="">Rol Adı: </span>
                                         </label>
-                                        <span class="fs-4 fw-bold">{{$role->name}}</span>
+                                        <span class="fs-4 fw-bold">{{$role?->name}}</span>
                                     </div>
                                     <div class="fv-row mb-4">
                                         @foreach(\App\Enums\PermissionsEnum::cases() as $permission)
                                             <div class="row mb-2">
-                                                <div class="form-label fw-bold ms-4">{{$permission->getLabel()}}</div>
+                                                <div class="form-label fw-bold ms-4">{{$permission?->getLabel()}}</div>
                                                 <div class="d-flex mb-2 ms-4">
                                                     <!--begin::Checkbox-->
                                                     <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20 ms-4">
                                                         <input class="form-check-input permissions" type="checkbox" name="permissions[]"
-                                                               @checked($role->hasPermissionTo("view_" . $permission->name()))
-                                                               value="view_{{$permission->name()}}" disabled/>
+                                                               @checked($role?->hasPermissionTo("view_" . $permission?->name()))
+                                                               value="view_{{$permission?->name()}}" disabled/>
                                                         <span class="form-check-label text-gray-900">Listeleme</span>
                                                     </label>
                                                     <!--end::Checkbox-->
                                                     <!--begin::Checkbox-->
                                                     <label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
                                                         <input class="form-check-input permissions" type="checkbox" name="permissions[]"
-                                                               @checked($role->hasPermissionTo("create_" . $permission->name()))
-                                                               value="create_{{$permission->name()}}" disabled/>
+                                                               @checked($role?->hasPermissionTo("create_" . $permission?->name()))
+                                                               value="create_{{$permission?->name()}}" disabled/>
                                                         <span class="form-check-label text-gray-900 text-gray-900">Ekleme</span>
                                                     </label>
                                                     <!--end::Checkbox-->
                                                     <!--begin::Checkbox-->
                                                     <label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
                                                         <input class="form-check-input permissions" type="checkbox" name="permissions[]"
-                                                               @checked($role->hasPermissionTo("update_" . $permission->name()))
-                                                               value="update_{{$permission->name()}}" disabled/>
+                                                               @checked($role?->hasPermissionTo("update_" . $permission?->name()))
+                                                               value="update_{{$permission?->name()}}" disabled/>
                                                         <span class="form-check-label text-gray-900">Güncelleme</span>
                                                     </label>
                                                     <!--end::Checkbox-->
                                                     <!--begin::Checkbox-->
                                                     <label class="form-check form-check-custom form-check-solid">
                                                         <input class="form-check-input permissions" type="checkbox" name="permissions[]"
-                                                               @checked($role->hasPermissionTo("delete_" . $permission->name()))
-                                                               value="delete_{{$permission->name()}}" disabled/>
+                                                               @checked($role?->hasPermissionTo("delete_" . $permission?->name()))
+                                                               value="delete_{{$permission?->name()}}" disabled/>
                                                         <span class="form-check-label text-gray-900">Silme</span>
                                                     </label>
                                                     <!--end::Checkbox-->
