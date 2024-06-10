@@ -23,7 +23,7 @@ class InitDataSeeder extends Seeder
             "password"              =>  "123",
             "email_verified_at"     =>  now(),
             "slug"                  =>  "root-admin",
-            "role"                  =>  "1",
+            "role_id"               =>  "1",
             "status"                =>  "1",
             "phone"                 =>  "0123456789",
             "created_by"            =>  "1",
